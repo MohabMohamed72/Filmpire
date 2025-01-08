@@ -12,8 +12,9 @@ import Gallery from '../../Components/Gallery/Gallery';
 import { FetchMoveieFromGenres } from '../../Store/MoviesSlice/AllMoveisFetch/GenresMoveis';
 import { FetchMoveieFromCategoreis } from '../../Store/MoviesSlice/AllMoveisFetch/CategoriesMoveis';
 import Buttons from '../../Components/Buttons/Buttons';
+import { NotVisable } from '../../Store/MoviesSlice/SearchVisablity/SearchVisiabilty';
 
-
+// import  img  from '../../assets/genres/action.png'
 
 const MoveiDetails = () => {
 
@@ -79,15 +80,15 @@ const MoveiDetails = () => {
 
 
      useEffect(()=>{
-       
-     },[movei_id])
+       dispatch(NotVisable())
+     },[])
 
      const overflowRef = useRef(null);
 
      const scrollToTop = () => {
-    //    if (overflowRef.current) {
-    //      overflowRef.current.scrollTop = 0;
-    //    }
+       if (overflowRef.current) {
+         overflowRef.current.scrollTop = 0;
+       }
      };
 let x= 0 ;
 // console.log(thriller)
@@ -129,6 +130,7 @@ let x= 0 ;
                                             if(el.name === 'Science Fiction' ){
                                                 return el2 === `/src/assets/genres/science%20fiction.png`
                                             }else{
+                                                // ../../assets/genres/action.png
                                                 return el2 === `/src/assets/genres/${String(el.name).toLowerCase()}.png` 
                                             }
 

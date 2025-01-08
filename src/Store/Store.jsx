@@ -11,6 +11,7 @@ import  MoveisSearch  from './MoviesSlice/SerachMoveis/MoveisSearch'
 import  ButtonsHandel  from './MoviesSlice/ButtonsSlice/ButtonsSlice'
 import  DrakMode  from './MoviesSlice/DrakMode/DrakMode'
 import  GetRequestToken  from './MoviesSlice/Login/Login'
+import  SearchVisablilty  from './MoviesSlice/SearchVisablity/SearchVisiabilty'
 
 
 
@@ -31,6 +32,7 @@ export const store = configureStore({
         ButtonsHandel:ButtonsHandel,
         DrakMode:DrakMode,
         GetRequestToken:GetRequestToken,
+        SearchVisablilty:SearchVisablilty,
 
  
     }

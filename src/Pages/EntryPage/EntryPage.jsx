@@ -4,6 +4,7 @@ import { FetchMoveieFromCategoreis } from '../../Store/MoviesSlice/AllMoveisFetc
 import BigCard from '../../Components/Gallery/BigCard'
 import Gallery from '../../Components/Gallery/Gallery'
 import Buttons from '../../Components/Buttons/Buttons'
+import { Visable } from '../../Store/MoviesSlice/SearchVisablity/SearchVisiabilty'
 
 const EntryPage = () => {
 
@@ -14,6 +15,9 @@ const EntryPage = () => {
     const dark = useSelector(state => state.DrakMode)
 
     const dispatch = useDispatch()
+ useEffect(()=>{
+        dispatch(Visable())
+    },[])
 
         useEffect(()=>{
             

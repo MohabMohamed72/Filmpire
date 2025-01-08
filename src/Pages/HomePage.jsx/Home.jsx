@@ -7,6 +7,7 @@ import Gallery from '../../Components/Gallery/Gallery'
 import BigCard from '../../Components/Gallery/BigCard' 
 import Buttons from '../../Components/Buttons/Buttons'
 import { FetchRequestToken } from '../../Store/MoviesSlice/Login/Login'
+import { Visable } from '../../Store/MoviesSlice/SearchVisablity/SearchVisiabilty'
 // import { B} from "react-awesome-loaders"
 
 
@@ -30,7 +31,9 @@ const Home = () => {
     const dispatch = useDispatch()
 
  
-
+    useEffect(()=>{
+        dispatch(Visable())
+    },[])
 
     const [Dark ,setDark] =useState(false)
     useEffect(()=>{

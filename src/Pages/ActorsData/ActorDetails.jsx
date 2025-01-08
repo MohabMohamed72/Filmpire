@@ -6,6 +6,7 @@ import { IoIosArrowRoundBack } from 'react-icons/io'
 import { FetchActorMoveis } from '../../Store/MoviesSlice/ActorsMoveis/ActorMovei'
 import Gallery from '../../Components/Gallery/Gallery'
 import Buttons from '../../Components/Buttons/Buttons'
+import { NotVisable } from '../../Store/MoviesSlice/SearchVisablity/SearchVisiabilty'
 
 const ActorDetails = () => {
 
@@ -34,6 +35,9 @@ const ActorDetails = () => {
           dispatch(FetchActorDetails(actor_id));
           dispatch(FetchActorMoveis(actor_id ));
     },[actor_id ])
+    useEffect(()=>{
+        dispatch(NotVisable())
+    },[ ])
 
     const overflowRef = useRef(null);
 
