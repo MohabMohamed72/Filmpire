@@ -122,7 +122,7 @@ console.log(Details)
                                     return(
                                     <>
                                     <Link to={`/${(AllGenres.find((id)=>id?.name === el.name)).id}`}> <div className='flex items-center gap-2 '>
-                                        <img className={`${Dark? `filter brightness-0 invert-[1]`:``} size-7`} src={Imgs.filter((el2)=>el2 === `/src/assets/genres/${String(el.name).toLowerCase()}.png` )} alt={el.name} />
+                                        <img className={`${Dark? `filter brightness-0 invert-[1]`:``} size-7`} src={Imgs.filter((el2)=>el2 === `/src/assets/genres/${String(el.name).toLowerCase()}.png` )} alt={el.name}/>
                                         <h1 className={`${Dark? `text-white`:`text-[#000000bc]`} `}>{el.name}</h1>
                                     </div></Link>
                                     </>
