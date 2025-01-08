@@ -66,6 +66,7 @@ const Home = () => {
 
     useEffect(()=>{
         if(Search.length > 0){
+            
             setPageMoveis(Search)
         }
     },[Search])
