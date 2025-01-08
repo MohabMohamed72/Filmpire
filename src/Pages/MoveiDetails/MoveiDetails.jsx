@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom'
 import { FetchMovieDetails } from '../../Store/MoviesSlice/MoveiDetails/AllMoveiDetails';
 import Rateing from '../../Components/Gallery/Rateing';
 import { FetchAllGenres } from '../../Store/MoviesSlice/MoveiGeners/AllGeners';
-import { Imgs } from '../../assets/genres/index';
+import { Imgs } from '../../assets/genres/index'
 import { FetchMoveiCast } from '../../Store/MoviesSlice/AllCast/AllCast';
 import MoveiFeatures from '../../Components/MoveiFeature/MoveiFeatures';
 import { FetchMoveiVideos } from '../../Store/MoviesSlice/MoveiVideo/MoveiVedios';
@@ -90,13 +90,13 @@ const MoveiDetails = () => {
     //    }
      };
 let x= 0 ;
-
+// console.log(thriller)
 
   return (
     <>
         <div className={`${Dark? `bg-[#000000d5]`:`bg-white`} scroll-smooth h-[100vh] overflow-auto max-sm:pt-10 max-sm:px-2 `} ref={overflowRef}>
             <div className='main flex max-xl:flex-wrap'>
-                    <div className='img 2xl:m-28 max-xl:ml-auto max-xl:mr-auto max-sm:px-10 p-10 '>
+                    <div className='img max-xl:ml-auto max-xl:mr-auto max-sm:px-10 p-10 '>
                         <img src={`https://image.tmdb.org/t/p/w500${Details?.poster_path}`} alt="" className={`${Dark? `drop-shadow-sm shadow-white`:`shadow-black`} rounded-2xl shadow-2xl shadow-black xl:w-[1000px] h-[700px] `} />
                     </div>  
 
