@@ -41,8 +41,8 @@ let x = 0;
 let y = 18;
 
   return (
-    <div className={`${(dark)? `bg-[#000000d5] `:`bg-[#1976d2] shadow-xl`}  shadow-xl shadow-slate-400 max-h-[80px] sticky w-full  transition-all duration-700 z-[1000] `}>
-      <div className='w-full h-full relative flex justify-between items-center px-5 py-2'>
+    <div className={`${(dark)? `bg-[#000000d5] `:`bg-[#1976d2] shadow-xl`}   shadow-xl shadow-slate-400 max-h-[80px] sticky w-full  transition-all duration-700 z-[1000] `}>
+      <div className='w-full h-full relative flex justify-between items-center px-5 py-2 max-sm:px-1'>
           <MdDarkMode  className={`${dark? `text-red-600`:`text-white`} size-6  cursor-pointer `} onClick={()=>{dispatch(ToggelDark())}}/>
           <div className='relative  ml-auto mr-auto  '>
             <CiSearch className='absolute top-1/2 -translate-y-1/2 size-6 left-[-7px] text-white' />

@@ -18,7 +18,7 @@ const MoveiFeatures = (props) => {
 
   return (
 
-    <div className='w-full flex-wrap max-xl:justify-center max-xl:gap-3 flex justify-between mt-10 max-sm:mt-6  max-sm:gap-5 max-sm:ml-auto max-sm:mr-auto max-sm:items-start'>
+    <div className='w-full msx-sm:flex-wrap max-xl:justify-center max-xl:gap-3 flex justify-between mt-10 max-sm:mt-6  max-sm:gap-5 max-sm:ml-auto max-sm:mr-auto max-sm:items-start'>
 
       <div className={`${dark? `border-white`:`border-blue-200 `} flex  border-[1px] border-blue-200  `}>
 
