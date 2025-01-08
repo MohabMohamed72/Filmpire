@@ -47,3 +47,29 @@ export const Imgs  = [
   upcoming,
 ];
 
+
+export default {
+  action,
+  adventure,
+  animation,
+  comedy,
+  crime,
+  documentary,
+  drama,
+  family,
+  fantasy,
+  horror,
+  history,
+  mystery,
+  music,
+  romance,
+  'science fiction': scienceFiction,
+  thriller,
+  'tv movie': tvMovie,
+  war,
+  western,
+
+  popular,
+  'top rated': topRated,
+  upcoming,
+};

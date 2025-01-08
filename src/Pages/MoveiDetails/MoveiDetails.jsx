@@ -13,7 +13,7 @@ import { FetchMoveieFromGenres } from '../../Store/MoviesSlice/AllMoveisFetch/Ge
 import { FetchMoveieFromCategoreis } from '../../Store/MoviesSlice/AllMoveisFetch/CategoriesMoveis';
 import Buttons from '../../Components/Buttons/Buttons';
 import { NotVisable } from '../../Store/MoviesSlice/SearchVisablity/SearchVisiabilty';
-
+import all from '../../assets/genres/index'
 import  scienceFiction from '../../assets/genres/science fiction.png'
 
 const MoveiDetails = () => {
@@ -91,7 +91,7 @@ const MoveiDetails = () => {
        }
      };
 let x= 0 ;
-// console.log(thriller)
+
 
   return (
     <>
@@ -126,16 +126,19 @@ let x= 0 ;
                                     <>
                                     <Link to={`/${(AllGenres.find((id)=>id?.name === el.name)).id}`}> <div className='flex items-center gap-2 '>
                                         
-                                        <img className={`${Dark? `filter brightness-0 invert-[1]`:``} size-7`} src={Imgs.find((el2)=>{
-                                            if(el.name === 'Science Fiction' ){
-                                                return el2 === scienceFiction
-                                                // `/src/assets/genres/science%20fiction.png`
-                                            }else{
-                                                // === `/src/assets/genres/${String(el.name).toLowerCase()}.png` 
-                                                return String(el2).includes(String(el.name).toLowerCase())
-                                            }
+                                        <img className={`${Dark? `filter brightness-0 invert-[1]`:``} size-7`} src={all[`${(String(el.name).toLowerCase())}`]}
+                                        // find((el2)=>{
+                                            // if(el.name === 'Science Fiction' ){
+                                            //     return el2 === scienceFiction
+                                            //     // `/src/assets/genres/science%20fiction.png`
+                                            // }else{
+                                            //     // === `/src/assets/genres/${String(el.name).toLowerCase()}.png` 
+                                            //     // String(el2).includes(String(el.name).toLowerCase())
+                                            //     return el2 = 
+                                            // }
 
-                                            })} alt={el.name}/>
+                                            // })
+                                            alt={el.name}/>
                                         <h1 className={`${Dark? `text-white`:`text-[#000000bc]`} `}>{el.name}</h1>
                                     </div></Link>
                                     </>
