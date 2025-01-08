@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+    .text-style{
+        @apply text-[17px] text-[rgba(0,0,0,0.89)]
+    }
+    .li-style{
+        @apply px-6 transition-all duration-700 cursor-pointer hover:bg-[#eeeeeed2] p-2 flex items-center gap-6 
+    }
+}
