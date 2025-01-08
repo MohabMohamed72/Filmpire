@@ -126,19 +126,7 @@ let x= 0 ;
                                     <>
                                     <Link to={`/${(AllGenres.find((id)=>id?.name === el.name)).id}`}> <div className='flex items-center gap-2 '>
                                         
-                                        <img className={`${Dark? `filter brightness-0 invert-[1]`:``} size-7`} src={all[`${(String(el.name).toLowerCase())}`]}
-                                        // find((el2)=>{
-                                            // if(el.name === 'Science Fiction' ){
-                                            //     return el2 === scienceFiction
-                                            //     // `/src/assets/genres/science%20fiction.png`
-                                            // }else{
-                                            //     // === `/src/assets/genres/${String(el.name).toLowerCase()}.png` 
-                                            //     // String(el2).includes(String(el.name).toLowerCase())
-                                            //     return el2 = 
-                                            // }
-
-                                            // })
-                                            alt={el.name}/>
+                                        <img className={`${Dark? `filter brightness-0 invert-[1]`:``} size-7`} src={all[`${(String(el.name).toLowerCase())}`]}alt={el.name}/>
                                         <h1 className={`${Dark? `text-white`:`text-[#000000bc]`} `}>{el.name}</h1>
                                     </div></Link>
                                     </>

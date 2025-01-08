@@ -56,9 +56,9 @@ const ActorDetails = () => {
             </div>
                     <div className=' xl:mr-14 max-sm:mt-2 max-xl:px-5 mt-auto mb-auto'>
                         <div className='flex flex-col  '>
-                            <h1 className={`${Dark? `text-white`:`text-black`} text-[30px] font-[400] max-sm:text-center mb-1`}>{AllActorDetails.name}</h1>
+                            <h1 className={`${Dark? `text-white`:`text-black`} text-[30px] text-center font-[400] max-sm:text-center mb-1`}>{AllActorDetails.name}</h1>
                             <p className={`${Dark? `text-white`:`text-black`}  text-[20px] font-[500] max-sm:text-center mb-1`}>Born: {AllActorDetails.birthday}</p>
-                            <p className={`${Dark? `text-white`:`text-black`}  text-[12px] mt-1 w-[800px] max-xl:w-full 2xl:w-full text-justify`}>{AllActorDetails?.biography}</p>
+                            <p className={`${Dark? `text-white`:`text-black`}  text-[12px] mt-1 w-[800px] max-xl:w-full text-justify`}>{AllActorDetails?.biography}</p>
                         </div>
 
 
