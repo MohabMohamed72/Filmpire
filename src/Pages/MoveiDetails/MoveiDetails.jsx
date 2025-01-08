@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom'
 import { FetchMovieDetails } from '../../Store/MoviesSlice/MoveiDetails/AllMoveiDetails';
 import Rateing from '../../Components/Gallery/Rateing';
 import { FetchAllGenres } from '../../Store/MoviesSlice/MoveiGeners/AllGeners';
-import { Imgs } from '../../assets/genres';
+import { Imgs } from '../../assets/genres/index';
 import { FetchMoveiCast } from '../../Store/MoviesSlice/AllCast/AllCast';
 import MoveiFeatures from '../../Components/MoveiFeature/MoveiFeatures';
 import { FetchMoveiVideos } from '../../Store/MoviesSlice/MoveiVideo/MoveiVedios';
@@ -12,7 +12,7 @@ import Gallery from '../../Components/Gallery/Gallery';
 import { FetchMoveieFromGenres } from '../../Store/MoviesSlice/AllMoveisFetch/GenresMoveis';
 import { FetchMoveieFromCategoreis } from '../../Store/MoviesSlice/AllMoveisFetch/CategoriesMoveis';
 import Buttons from '../../Components/Buttons/Buttons';
-// import {} from '../../assets/genres/index'
+
 
 
 const MoveiDetails = () => {
@@ -90,7 +90,8 @@ const MoveiDetails = () => {
     //    }
      };
 let x= 0 ;
-console.log(Imgs)
+
+
   return (
     <>
         <div className={`${Dark? `bg-[#000000d5]`:`bg-white`} scroll-smooth h-[100vh] overflow-auto max-sm:pt-10 max-sm:px-2 `} ref={overflowRef}>
@@ -123,12 +124,12 @@ console.log(Imgs)
                                     return(
                                     <>
                                     <Link to={`/${(AllGenres.find((id)=>id?.name === el.name)).id}`}> <div className='flex items-center gap-2 '>
-
+                                        
                                         <img className={`${Dark? `filter brightness-0 invert-[1]`:``} size-7`} src={Imgs.filter((el2)=>{
                                             if(el.name === 'Science Fiction' ){
-                                                return el2 === `Filmpire/src/assets/genres/science%20fiction.png`
+                                                return el2 === `/src/assets/genres/science%20fiction.png`
                                             }else{
-                                                return el2 === `Filmpire/src/assets/genres/${String(el.name).toLowerCase()}.png` 
+                                                return el2 === `/src/assets/genres/${String(el.name).toLowerCase()}.png` 
                                             }
 
                                             })} alt={el.name}/>
