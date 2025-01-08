@@ -14,7 +14,7 @@ import { FetchMoveieFromCategoreis } from '../../Store/MoviesSlice/AllMoveisFetc
 import Buttons from '../../Components/Buttons/Buttons';
 import { NotVisable } from '../../Store/MoviesSlice/SearchVisablity/SearchVisiabilty';
 
-// import  img  from '../../assets/genres/action.png'
+import  scienceFiction from '../../assets/genres/science fiction.png'
 
 const MoveiDetails = () => {
 
@@ -126,12 +126,13 @@ let x= 0 ;
                                     <>
                                     <Link to={`/${(AllGenres.find((id)=>id?.name === el.name)).id}`}> <div className='flex items-center gap-2 '>
                                         
-                                        <img className={`${Dark? `filter brightness-0 invert-[1]`:``} size-7`} src={Imgs.filter((el2)=>{
+                                        <img className={`${Dark? `filter brightness-0 invert-[1]`:``} size-7`} src={Imgs.find((el2)=>{
                                             if(el.name === 'Science Fiction' ){
-                                                return el2 === `/src/assets/genres/science%20fiction.png`
+                                                return el2 === scienceFiction
+                                                // `/src/assets/genres/science%20fiction.png`
                                             }else{
-                                                // ../../assets/genres/action.png
-                                                return el2 === `/src/assets/genres/${String(el.name).toLowerCase()}.png` 
+                                                // === `/src/assets/genres/${String(el.name).toLowerCase()}.png` 
+                                                return String(el2).includes(String(el.name).toLowerCase())
                                             }
 
                                             })} alt={el.name}/>
