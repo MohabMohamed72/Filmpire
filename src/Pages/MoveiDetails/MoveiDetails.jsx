@@ -95,7 +95,7 @@ let x= 0 ;
         <div className={`${Dark? `bg-[#000000d5]`:`bg-white`} scroll-smooth h-[100vh] overflow-auto max-sm:pt-10 max-sm:px-2 `} ref={overflowRef}>
             <div className='main flex max-xl:flex-wrap'>
                     <div className='img 2xl:m-28 max-xl:ml-auto max-xl:mr-auto max-sm:px-10 p-10 '>
-                        <img src={`https://image.tmdb.org/t/p/w500${Details?.poster_path}`} alt="" className={`${Dark? `drop-shadow-sm shadow-white`:`shadow-black`} rounded-2xl shadow-2xl shadow-black w-fit h-[700px] `} />
+                        <img src={`https://image.tmdb.org/t/p/w500${Details?.poster_path}`} alt="" className={`${Dark? `drop-shadow-sm shadow-white`:`shadow-black`} rounded-2xl shadow-2xl shadow-black xl:w-[1000px] h-[700px] `} />
                     </div>  
 
                     <div className='2xl:mt-10 ml-auto mr-auto '>
