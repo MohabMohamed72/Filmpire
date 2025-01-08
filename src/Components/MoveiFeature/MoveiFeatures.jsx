@@ -41,7 +41,7 @@ const MoveiFeatures = (props) => {
       </div>
 
 
-    <div className={`${dark? `border-white`:`border-blue-200 `} flex  border-[1px] border-blue-200 mr-5 w-fit `}>
+    <div className={`${dark? `border-white`:`border-blue-200 `} flex  border-[1px] border-blue-200 mr-5 max-sm:-translate-x-3 w-fit `}>
       
       <div className=' flex items-center gap-2 cursor-pointer hover:bg-blue-100 px-3 py-1' >
         <p className={`${dark? `text-white`:`text-blue-600`} font-[500] text-[12px]`}>FAVORITE</p>
