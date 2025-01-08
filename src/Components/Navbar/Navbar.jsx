@@ -43,7 +43,7 @@ let y = 18;
   return (
     <div className={`${(dark)? `bg-[#000000d5] `:`bg-[#1976d2] shadow-xl`}   shadow-xl shadow-slate-400 max-h-[80px] sticky w-full  transition-all duration-700 z-[1000] `}>
       <div className='w-full h-full relative flex justify-between items-center px-5 py-2 max-sm:px-1'>
-          <MdDarkMode  className={`${dark? `text-red-600`:`text-white`} size-6  cursor-pointer `} onClick={()=>{dispatch(ToggelDark())}}/>
+          <MdDarkMode  className={`${dark? `text-red-600`:`text-white`} size-6 max-sm:mr-3  cursor-pointer `} onClick={()=>{dispatch(ToggelDark())}}/>
           <div className='relative  ml-auto mr-auto  '>
             <CiSearch className='absolute top-1/2 -translate-y-1/2 size-6 left-[-7px] text-white' />
             <input type="text"  className=' transition-all duration-700 border-b-2 focus:border-orange-400 text-white text-[20px] px-6 max-sm:px-0 py-1 bg-transparent focus:outline-none' onChange={(e)=>{
@@ -56,7 +56,7 @@ let y = 18;
             <p className='text-[12px] text-white font-[500] max-sm:hidden'>LOGIN</p>
             <IoMdPerson className='max-w-10 text-white cursor-pointer max-sm:hidden'/>
           </div> 
-          <div className='hidden max-md:block max-md:ml-5'>
+          <div className='hidden max-md:block max-md:ml-3'>
             <FaBars className='size-5 text-white cursor-pointer ' onClick={()=>{setSidebarVisabilty(!SidebarVisabilty)}}/>
           </div>
       </div>
