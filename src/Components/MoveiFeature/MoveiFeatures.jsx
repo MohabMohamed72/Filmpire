@@ -18,9 +18,9 @@ const MoveiFeatures = (props) => {
 
   return (
 
-    <div className='w-full flex-wrap max-xl:justify-center max-xl:gap-3 flex justify-between mt-10 max-sm:mt-6 max-sm:flex-col max-sm:gap-5 max-sm:ml-auto max-sm:mr-auto max-sm:items-start'>
+    <div className='w-full flex-wrap max-xl:justify-center max-xl:gap-3 flex justify-between mt-10 max-sm:mt-6  max-sm:gap-5 max-sm:ml-auto max-sm:mr-auto max-sm:items-start'>
 
-      <div className={`${dark? `border-white`:`border-blue-600 `} flex  border-[1px] border-blue-200  `}>
+      <div className={`${dark? `border-white`:`border-blue-200 `} flex  border-[1px] border-blue-200  `}>
 
           <div className=' hover:bg-blue-100  flex items-center gap-2 cursor-pointer p-1 px-3' onClick={()=>{window.open(`${props.homepage}`, '_blank')}}>
             <p className={`${dark? `text-white`:`text-blue-600`} font-[500] text-[12px]`}>Website</p>
@@ -41,7 +41,7 @@ const MoveiFeatures = (props) => {
       </div>
 
 
-    <div className={`${dark? `border-white`:`border-blue-200 `} flex  border-[1px] border-blue-200  mr-5 `}>
+    <div className={`${dark? `border-white`:`border-blue-200 `} flex  border-[1px] border-blue-200 mr-5 `}>
       
       <div className=' flex items-center gap-2 cursor-pointer hover:bg-blue-100 p-1 px-3 ' >
         <p className={`${dark? `text-white`:`text-blue-600`} font-[500] text-[12px]`}>FAVORITE</p>

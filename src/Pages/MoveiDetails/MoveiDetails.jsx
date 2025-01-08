@@ -84,12 +84,12 @@ const MoveiDetails = () => {
      const overflowRef = useRef(null);
 
      const scrollToTop = () => {
-       if (overflowRef.current) {
-         overflowRef.current.scrollTop = 0;
-       }
+    //    if (overflowRef.current) {
+    //      overflowRef.current.scrollTop = 0;
+    //    }
      };
 let x= 0 ;
-
+console.log(Details)
   return (
     <>
         <div className={`${Dark? `bg-[#000000d5]`:`bg-white`} scroll-smooth h-[100vh] overflow-auto max-sm:pt-10 max-sm:px-2 `} ref={overflowRef}>
@@ -98,7 +98,7 @@ let x= 0 ;
                         <img src={`https://image.tmdb.org/t/p/w500${Details?.poster_path}`} alt="" className={`${Dark? `drop-shadow-sm shadow-white`:`shadow-black`} rounded-2xl shadow-2xl shadow-black xl:w-[1000px] h-[700px] `} />
                     </div>  
 
-                    <div className='2xl:mt-10 ml-auto mr-auto '>
+                    <div className='2xl:mt-10 ml-auto mr-auto w-full '>
                         <div className='data max-sm:mt-5 mt-12 ml-auto mr-auto '>
                             <div className='flex justify-center items-center gap-4 max-sm:flex-col max-sm:gap-1'>
                                 <h1 className={`${dark? `text-white`:`text-[#000000bc]`} text-center w-fit text-[40px] font-[500] text-[#000000bc]`}>{Details['title']}</h1>
@@ -122,7 +122,7 @@ let x= 0 ;
                                     return(
                                     <>
                                     <Link to={`/${(AllGenres.find((id)=>id?.name === el.name)).id}`}> <div className='flex items-center gap-2 '>
-                                        <img className={`${Dark? `filter brightness-0 invert-[1]`:``} size-7`} src={Imgs.filter((el2)=>el2 === `/src/assets/genres/${String(el.name).toLowerCase()}.png` )} alt="" />
+                                        <img className={`${Dark? `filter brightness-0 invert-[1]`:``} size-7`} src={Imgs.filter((el2)=>el2 === `/src/assets/genres/${String(el.name).toLowerCase()}.png` )} alt={el.name} />
                                         <h1 className={`${Dark? `text-white`:`text-[#000000bc]`} `}>{el.name}</h1>
                                     </div></Link>
                                     </>
@@ -130,13 +130,13 @@ let x= 0 ;
                                 })
                             }
                         </div>
-                         <div className='overview mt-10 max-sm:p-3 ml-auto mr-auto pl-10'>
+                         <div className='overview mt-10 max-sm:p-3 ml-auto mr-auto sm:pl-10'>
                             <h1 className={`${Dark? `text-white`:`text-[#000000bc]`} text-[22px] font-[500]`}>OverView</h1>
-                            <p className={`${Dark?`text-white`:`text-[#000000bc]`} text-[15px]  mt-2 w-full`}>{Details['overview']}</p>
+                            <p className={`${Dark?`text-white`:`text-[#000000bc]`} text-[15px]  mt-2 w-full text-justify`}>{Details['overview']}</p>
                         </div>
 
-                        <h1 className={`${Dark? `text-white`:`text-[#000000bc]`} text-[22px] mt-10 font-[500] max-sm:text-center px-10`}>Top Cast</h1>
-                        <div className='flex flex-wrap mt-2 max-sm:gap-3 pl-10 max-sm:flex-wrap'>
+                        <h1 className={`${Dark? `text-white`:`text-[#000000bc]`} text-[22px] mt-10 font-[500] max-sm:text-center px-10 ml-auto `}>Top Cast</h1>
+                        <div className='flex flex-wrap mt-2 max-sm:gap-3 pl-10 max-sm:flex-wrap '>
                             {
                                 (AllCast?.cast || []).map((el)=>{
                                 x++;
