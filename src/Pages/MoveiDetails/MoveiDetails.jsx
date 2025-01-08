@@ -145,8 +145,8 @@ let x= 0 ;
                             <p className={`${Dark?`text-white`:`text-[#000000bc]`} text-[15px]  mt-2 w-full text-justify`}>{Details['overview']}</p>
                         </div>
 
-                        <h1 className={`${Dark? `text-white`:`text-[#000000bc]`} text-[22px] mt-10 font-[500] max-sm:text-center px-10 ml-auto `}>Top Cast</h1>
-                        <div className='flex flex-wrap mt-2 max-sm:gap-3 pl-10 max-sm:flex-wrap '>
+                        <h1 className={`${Dark? `text-white`:`text-[#000000bc]`} text-[22px] mt-10 font-[500] max-sm:text-center w-fit px-10 ml-auto mr-auto `}>Top Cast</h1>
+                        <div className='flex flex-wrap mt-2 max-sm:gap-3  max-sm:flex-wrap max-sm:justify-center'>
                             {
                                 (AllCast?.cast || []).map((el)=>{
                                 x++;
