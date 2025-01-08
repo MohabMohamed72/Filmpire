@@ -12,6 +12,7 @@ import Gallery from '../../Components/Gallery/Gallery';
 import { FetchMoveieFromGenres } from '../../Store/MoviesSlice/AllMoveisFetch/GenresMoveis';
 import { FetchMoveieFromCategoreis } from '../../Store/MoviesSlice/AllMoveisFetch/CategoriesMoveis';
 import Buttons from '../../Components/Buttons/Buttons';
+// import {} from '../../assets/genres/index'
 
 
 const MoveiDetails = () => {
@@ -122,11 +123,12 @@ console.log(Imgs)
                                     return(
                                     <>
                                     <Link to={`/${(AllGenres.find((id)=>id?.name === el.name)).id}`}> <div className='flex items-center gap-2 '>
+
                                         <img className={`${Dark? `filter brightness-0 invert-[1]`:``} size-7`} src={Imgs.filter((el2)=>{
                                             if(el.name === 'Science Fiction' ){
-                                                return el2 === `/src/assets/genres/science%20fiction.png`
+                                                return el2 === `Filmpire/src/assets/genres/science%20fiction.png`
                                             }else{
-                                                return el2 === `/src/assets/genres/${String(el.name).toLowerCase()}.png` 
+                                                return el2 === `Filmpire/src/assets/genres/${String(el.name).toLowerCase()}.png` 
                                             }
 
                                             })} alt={el.name}/>
